@@ -2,6 +2,27 @@ variable "aws_region" {
   default = "eu-west-2"
 }
 
+
+variable "instance_tenancy" {
+  description = "tenancy option for instances launched into the vpc"
+  default     = "default"
+  type        = string
+}
+
+variable "enable_dns_hostname" {
+  description = "should be tru to enable DNS support in the vpc"
+  default     = true
+  type        = bool
+}
+
+
+variable "enable_dns_support" {
+  description = "should be tru to enable DNS support in the vpc"
+  default     = true
+  type        = bool
+}
+
+
 variable "environment" {
   default = "Demo"
 }
